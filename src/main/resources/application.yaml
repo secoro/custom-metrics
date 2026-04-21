@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: custom-metrics
+
+management:
+  server:
+    port: 9000
+  endpoints:
+    web:
+      exposure:
+        include:
+          - metrics
+          - prometheus
+  prometheus:
+    metrics:
+      export:
+        enabled: true
